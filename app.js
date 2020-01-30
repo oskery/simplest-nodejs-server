@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   if (req.query.facility && req.query.door) {
     if (os === "iphone" || os === "ipad" || os === "ipod") {
     res.redirect(
-      `exp://192.168.137.173:19000?facility=${req.params.facility}&door=1`
+      `exp://192.168.137.173:19000?facility=${req.query.facility}&door=${req.query.door}`
     );
     }
   }
